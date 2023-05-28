@@ -1,0 +1,23 @@
+Q1. Get your basics right - Implement selection sort algorithm in python. The function accepts a
+list in the input and returns a sorted list.
+E.g.
+Input f1([5,416,54,21,6135,15,741]) should
+Return [5, 15, 21, 54, 416, 741, 6135]
+
+ANSWER: 
+
+def selectionSort(nlist):
+   for fillslot in range(len(nlist)-1,0,-1):
+       maxpos=0
+       for location in range(1,fillslot+1):
+           if nlist[location]>nlist[maxpos]:
+               maxpos = location
+
+       temp = nlist[fillslot]
+       nlist[fillslot] = nlist[maxpos]
+       nlist[maxpos] = temp
+
+nlist = [5,416,54,21,6135,15,741]
+selectionSort(nlist)
+print(nlist)
+
